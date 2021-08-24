@@ -15,15 +15,15 @@ const mainDishes = [
 
     {name: "Uma porção de batata frita", 
     description: "Ok, você venceu... Batata Frita!",
-    image: "Images/Camarão.jpg",
-    alt: "Prato com grandes camarões assados, inteiros, acompanhado de salsinha e pedaços de laranja no centro",
+    image: "Images/Batata Frita.png",
+    alt: "Grande porção de batata frita coberta com queijo ralado e salsa",
     price: "R$ 25,50"
     },
 
     {name: "Camarão Assassinado", 
     description: "Infelizmente não acompanha peixe-galo.. Ele bateu asas e voou :/",
-    image: "Images/Panqueca com Caviar.jpg",
-    alt: "Prato de panquecas ao molho branco coberto com caviar",
+    image: "Images/Camarão.jpg",
+    alt: "Prato com grandes camarões assados, inteiros, acompanhado de salsinha e pedaços de laranja no centro",
     price: "R$ 45,90"
     }
 ];
