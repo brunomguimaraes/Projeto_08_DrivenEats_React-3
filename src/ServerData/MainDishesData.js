@@ -1,4 +1,4 @@
-mainDishes = [
+const mainDishes = [
     {name: "Panqueca ao Caviar", 
     description: "Nunca viu? Nem comeu? Só ouviu falar? Aqui tem!",
     image: "Images/Panqueca com Caviar.jpg",

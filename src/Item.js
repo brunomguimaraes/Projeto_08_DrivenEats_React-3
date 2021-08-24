@@ -1,17 +1,16 @@
-export default function Item() {
+export default function Item(props) {
     return (
         <li onclick="ActivateMainDish(this);">
         <div>
-            <img src="Images/Panqueca com Caviar.jpg"
-            alt="Prato de panquecas ao molho branco coberto com caviar" />
+            <img src={props.data.image} alt={props.data.alt} />
             <p className="item-title">
-                Panqueca ao Caviar
+                {props.data.name}
             </p>
         </div>
         <p className="item-subtitle">
-            Nunca viu? Nem comeu? Só ouviu falar? Aqui tem!
+            {props.data.description}
         </p>
-        <p className="item-price">R$ 42,20</p>
+        <p className="item-price">{props.data.price}</p>
         <ion-icon name="checkmark-circle" />
     </li>
     );

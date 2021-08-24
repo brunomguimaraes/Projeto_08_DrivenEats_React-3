@@ -1,4 +1,4 @@
-deserts = [
+const deserts = [
     {name: "Chocolate" , 
     description: "Não adianta vir com guaraná pra mim!",
     image: "Images/Chocolate.jpg",

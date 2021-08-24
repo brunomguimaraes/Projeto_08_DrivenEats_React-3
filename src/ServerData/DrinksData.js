@@ -1,4 +1,4 @@
-drinks = [
+const drinks = [
     {name: "Geração Coca-Cola", 
     description: "Somos os filhos da revolução!",
     image: "Images/Coca Cola.jpg",
