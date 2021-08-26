@@ -77,10 +77,6 @@
     margin-bottom: 7px;
 }
 
-.menu ion-icon {
-    display: none;
-}
-
 .menu-title {
     font-family: 'Righteous', cursive;
     font-weight: 400;
@@ -112,16 +108,30 @@
     color: #000000;
 }
 
-.menu .activated-item {
+.menu li.activated-item {
     box-shadow: inset 0px 0px 0px 7px #32B72F;
 }
 
-.menu .activated-item ion-icon {
-    display: block;
+.menu .select-quantity {
+    display:none;
+}
+
+.menu .activated-item.select-quantity {
+    width: 47px;
+    display: flex;
+    justify-content: space-between;
+    font-family: 'Roboto', sans-serif;
     position: absolute;
-    bottom: 15px;
-    right: 13px;
-    font-size: 20px;
+    bottom: 13px;
+    right: 11px;
+    font-size: 16px;
+}
+
+.menu .activated-item .red {
+    color: #CF2B2B;
+}
+
+.menu .activated-item .green {
     color: #32B72F;
 }
 
