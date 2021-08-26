@@ -10,7 +10,7 @@
     background-color: #CF2b2b;
     padding: 16px 24px 0px;
     position: fixed;
-    z-index:2;
+    z-index:4;
     left:0;
     top:0;
     box-shadow: 0px 0px 5px 5px rgba(0, 0, 0, 0.25); ;
@@ -178,74 +178,77 @@
     width:100%;
     height: 100%;
     position: fixed;
-    z-index: 4;
+    z-index: 3;
     left:0;
     top:0;
-    background-color: rgba(255,255,255,0.85);
+    background-color: #EEEEEE;
+    padding: 124px 18px 0px;
     display: flex;
-    justify-content: center;
+    flex-direction: column;
     align-items: center;
-    padding: 0px 18px;
 }
 
 .confirmation-screen.hidden {
     display: none;
 }
 
+.confirmation-screen > span {
+    width: 100%;
+    font-family: 'Righteous', cursive;
+    font-weight: 400;
+    font-size: 26px;
+    color: #333333;
+}
+
 .confirmation-screen ul {
     width: 100%;
-    background-color: #50D074 ;
-    border-radius: 9px;
+    background-color: #FFFFFF ;
     box-shadow: 0px 0px 4px 4px rgba(180, 180, 180, 0.3);
+    margin-top: 32px;
     padding: 24px;
+    border-radius: 9px;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    font-family: 'Roboto', sans-serif;
-    color: #FFFFFF;
-    font-size: 22px;
-    font-weight: 700;
+
 }
 
 .confirmation-screen li {
-    display: flex;
-    justify-content: center;
-    align-items: center;
     width: 100%;
-}
-
-.confirmation-screen li:first-child {
-    margin-bottom: 28px;
-}
-
-.confirmation-screen p:first-child {
-    margin-right: 24px;
-}
-
-.confirmation-screen .price-line {
-    justify-content: space-between;
-}
-
-.confirmation-screen .main-dish,
-.confirmation-screen .drink,
-.confirmation-screen .desert {
-    font-weight: 400;
     margin-bottom: 16px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-family: 'Roboto', sans-serif;
+    color: #333333;
+    font-size: 20px;
+    font-weight: 400;
+}
+
+.confirmation-screen li:last-child {
+    font-weight: 700;
+    text-transform: uppercase;
+    margin-bottom: 0px;
+}
+
+.confirmation-screen button {
+    width: min(80%,329px);
+    height: 52px;
+    border-radius: calc(52px / 2);
+    font-family: 'Roboto', sans-serif;
+    font-size: 20px;
+    font-weight: 700;
 }
 
 .confirmation-screen .finish-order {
-    width: 100%;
-    color: #50D074;
-    background-color: #FFFFFF;
-    height: 52px;
-    border-radius: calc(52px / 2);
-    margin-top: 24px;
-    margin-bottom: 16px;
+    background-color: #50D074;
+    color: #FFFFFF;
+    margin: 24px 0px 6px;
 }
 
 .confirmation-screen .cancel-order {
-    font-size: 20px;
+    color:#777777;
 }
 
 /*---------------- End of the confirmation Screen ----------------*/
