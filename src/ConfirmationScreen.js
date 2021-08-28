@@ -1,6 +1,6 @@
-export default function ConfirmationScreen() {
+export default function ConfirmationScreen({isHidden}) {
     return(
-        <section className="confirmation-screen hidden">
+        <section className={`confirmation-screen ${isHidden}`}>
             <span> Revise seu pedido</span>
             <ul>
                 <li>

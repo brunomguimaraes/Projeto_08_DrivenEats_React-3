@@ -1,24 +1,29 @@
 import React,{useState} from "react";
 
-export default function Item(props) {
-    const {image,alt,name,description,price} = props.data;
-    const [quantity,setQuantity] = useState(0);
+export default function Item({ menuIndex, itemIndex, data:{image, alt, name, description, price}, quantities, adjustQuantitiesArray}) {
     const [isSelected,setIsSelected] = useState("");
+    const itemQuantity = quantities[menuIndex][itemIndex];
 
     function decrementQuantity() {
-        if (quantity === 1) {
+        if (itemQuantity === 1) {
             setIsSelected("");
         }
-        setQuantity(quantity - 1);
+        adjustQuantitiesArray ({menuIndex, itemIndex,adjustingValue:-1});
     }
-    
+
+    function incrementQuantity() {
+        adjustQuantitiesArray ({menuIndex, itemIndex,adjustingValue:+1});
+    }
+
     function selectItem() {
-        setIsSelected("activated-item");
-        setQuantity(1);
+        if (isSelected !== "activated-item") {
+            setIsSelected("activated-item");
+            incrementQuantity();
+        }
     }
 
     return (
-        <li className={isSelected} onClick={selectItem}>
+        <li className={isSelected} onClick = {selectItem}>
             <div>
                 <img src={image} alt={alt} />
                 <p className="item-title">
@@ -32,11 +37,11 @@ export default function Item(props) {
                 {price}
             </p>
             <div className={`select-quantity ${isSelected}`} onClick = {(e) => e.stopPropagation()} >
-                <button className="red" onClick={decrementQuantity}>
+                <button className="red" onClick = {decrementQuantity}>
                     -
                 </button>
-                    {quantity}
-                <button className="green" onClick={() => setQuantity(quantity + 1)}>
+                    {itemQuantity}
+                <button className="green" onClick = {incrementQuantity}>
                     +
                 </button>
             </div>

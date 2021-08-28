@@ -1,7 +1,7 @@
 const deserts = [
     {name: "Chocolate" , 
     description: "Não adianta vir com guaraná pra mim!",
-    image: "Images/Chocolate.jpg",
+    image: "/Images/Chocolate.jpg",
     alt: "Pedaços de barra de chocolate sobrepostos, com raspas de chocolate em volta como enfeite",
     price: "R$ 7,80"
     },

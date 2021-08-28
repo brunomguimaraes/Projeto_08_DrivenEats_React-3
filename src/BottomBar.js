@@ -1,7 +1,7 @@
-export default function BottomBar() {
+export default function BottomBar({isButtonActivated}) {
     return (
         <div className="bottom-bar">
-            <button>
+            <button className={isButtonActivated}>
                 Selecione os 3 itens para fechar o pedido
             </button>
         </div>
