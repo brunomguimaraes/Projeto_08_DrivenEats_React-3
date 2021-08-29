@@ -154,7 +154,7 @@
     box-shadow: 0px 0px 2px 2px rgba(180, 180, 180, 0.1);
 }
 
-.bottom-bar button {
+.bottom-bar .link {
     width: 100%;
     height:53px;
     background-color: #cbcbcb;
@@ -164,11 +164,18 @@
     font-size: 20px;
     font-weight: 400;
     color: #ffffff;
+    display: flex;
+    align-items: center;
+    text-align: center;
 }
 
-.bottom-bar .activated-button {
+.bottom-bar .link.activated {
     background-color: #32B72F; 
     font-weight: 700;
+}
+
+.bottom-bar .link span {
+    width: 100%;
 }
 
 /*---------------- End of the bottom of the app ----------------*/
@@ -186,10 +193,7 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-}
-
-.confirmation-screen.hidden {
-    display: none;
+    overflow: scroll;
 }
 
 .confirmation-screen > span {
@@ -226,28 +230,36 @@
     font-weight: 400;
 }
 
+.confirmation-screen li span:last-child {
+    min-width: 60px;
+    text-align: right;
+}
+
 .confirmation-screen li:last-child {
     font-weight: 700;
     text-transform: uppercase;
     margin-bottom: 0px;
 }
 
-.confirmation-screen button {
+.confirmation-screen .link {
     width: min(80%,329px);
-    height: 52px;
+    min-height: 52px;
     border-radius: calc(52px / 2);
     font-family: 'Roboto', sans-serif;
     font-size: 20px;
     font-weight: 700;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
-.confirmation-screen .finish-order {
+.confirmation-screen .link.finish-order {
     background-color: #50D074;
     color: #FFFFFF;
     margin: 24px 0px 6px;
 }
 
-.confirmation-screen .cancel-order {
+.confirmation-screen .link.cancel-order {
     color:#777777;
 }
 

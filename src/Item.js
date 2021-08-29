@@ -34,7 +34,7 @@ export default function Item({ menuIndex, itemIndex, data:{image, alt, name, des
                 {description}
             </p>
             <p className="item-price">
-                {price}
+                {`R$ ${price.toFixed(2).replace(".",",")}`}
             </p>
             <div className={`select-quantity ${isSelected}`} onClick = {(e) => e.stopPropagation()} >
                 <button className="red" onClick = {decrementQuantity}>
