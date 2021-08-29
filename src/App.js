@@ -6,19 +6,29 @@ import serverData from "./ServerData/AllServerData.js";
 import React,{useState} from "react";
 
 export default function App() {
-    const initialQuantities = serverData.map(({array}) => array.map(() => 0));
-    const [quantities,setQuantities] = useState(initialQuantities);
+    const [quantities,setQuantities] = useState(serverData.map(({array}) => array.map(() => 0)));
+    const isOrderValid = quantities.every((menuQuantities) => menuQuantities.some((itemQuantity) => itemQuantity !== 0));
+    const [confirmationClass,setConfirmationClass] = useState("hidden")
 
-    function adjustItemQuantity ({menuIndex, itemIndex,adjustingValue}) {
+    const adjustQuantitiesArray = ( {menuIndex, itemIndex,adjustingValue} ) => {
         const newQuantities = [...quantities];
         newQuantities[menuIndex][itemIndex] += adjustingValue;
-        return newQuantities;
+        setQuantities(newQuantities);
     }
 
-    function adjustQuantitiesArray({menuIndex, itemIndex,adjustingValue}) {
-        setQuantities(adjustItemQuantity ({menuIndex, itemIndex,adjustingValue}));
+    const adjustButtonClass = () => {
+        if (isOrderValid) {
+            return {buttonClass:"activated-button", buttonText: "Fechar pedido"}
+        }
+        return {buttonClass:"", buttonText: "Selecione os 3 itens para fechar o pedido"}
     }
-    
+
+    const showConfirmationScreen = () => {
+        if (isOrderValid) {
+            setConfirmationClass("");
+        }
+    }
+
     return (
         <>
             <TopBar />
@@ -33,8 +43,10 @@ export default function App() {
                 adjustQuantitiesArray = {adjustQuantitiesArray}
                 />)}
             </div>
-            <BottomBar isButtonActivated={""}/>
-            <ConfirmationScreen isHidden={'hidden'}/>
+            <BottomBar buttonData={{...adjustButtonClass(), buttonFunction: showConfirmationScreen}}/>
+            <ConfirmationScreen
+            confirmationClass={confirmationClass}
+            setConfirmationClass = {setConfirmationClass}/>
         </>
     );
 }

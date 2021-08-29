@@ -1,8 +1,8 @@
-export default function BottomBar({isButtonActivated}) {
+export default function BottomBar({buttonData:{buttonClass, buttonText, buttonFunction}}) {
     return (
         <div className="bottom-bar">
-            <button className={isButtonActivated}>
-                Selecione os 3 itens para fechar o pedido
+            <button className={buttonClass} onClick = {buttonFunction}>
+                {buttonText}
             </button>
         </div>
     );

@@ -1,6 +1,7 @@
-export default function ConfirmationScreen({isHidden}) {
+export default function ConfirmationScreen({confirmationClass, setConfirmationClass}) {
+    
     return(
-        <section className={`confirmation-screen ${isHidden}`}>
+        <section className={`confirmation-screen ${confirmationClass}`}>
             <span> Revise seu pedido</span>
             <ul>
                 <li>
@@ -23,7 +24,7 @@ export default function ConfirmationScreen({isHidden}) {
             <button className = "finish-order">
                 Tudo certo, pode pedir!
             </button>
-            <button className = "cancel-order">
+            <button className = "cancel-order" onClick={() => setConfirmationClass("hidden")}>
                 Cancelar
             </button>
         </section>
