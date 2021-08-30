@@ -10,7 +10,6 @@ import {BrowserRouter as Router, Switch, Route} from "react-router-dom";
 export default function App() {
 
     const [quantities,setQuantities] = useState(serverData.map(({array}) => array.map(() => 0)));
-    const isOrderValid = quantities.every((menuQuantities) => menuQuantities.some((itemQuantity) => itemQuantity !== 0));
     
     const adjustQuantitiesArray = ( {menuIndex, itemIndex,adjustingValue} ) => {
         const newQuantities = [...quantities];
@@ -41,7 +40,7 @@ export default function App() {
                                 adjustQuantitiesArray = {adjustQuantitiesArray}
                             />)}
                     </div>
-                    <BottomBar isOrderValid = {isOrderValid} />
+                    <BottomBar quantities = {quantities} />
                 </Route>
             </Switch>
         </Router>

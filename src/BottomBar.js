@@ -1,6 +1,7 @@
 import {Link} from "react-router-dom";
 
-export default function BottomBar({isOrderValid,buttonFunction}) {
+export default function BottomBar({quantities}) {
+    const isOrderValid = quantities.every((menuQuantities) => menuQuantities.some((itemQuantity) => itemQuantity !== 0));
     let buttonClass;
     let buttonText;
     if (isOrderValid) {
