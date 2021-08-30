@@ -1,21 +1,21 @@
 import Item from "./Item";
 import "./CSS/menu.css";
 
-export default function Menu({menuIndex, title, items, quantities, adjustQuantitiesArray}) {
+export default function Menu({ menuIndex, title, items, quantities, adjustQuantitiesArray }) {
     return (
-        <div className="menu main-dish">
+        <div className = "menu main-dish">
             <p className = "menu-title">
-                {title}
+                { title }
             </p>
             <ul>
-                {items.map((itemObject,index) => 
+                {items.map((itemObject, index) => 
                 <Item 
-                key = {index}
-                menuIndex = {menuIndex}
-                itemIndex = {index}
-                data = {itemObject}
-                quantities = {quantities}
-                adjustQuantitiesArray = {adjustQuantitiesArray}
+                key = { index }
+                menuIndex = { menuIndex }
+                itemIndex = { index }
+                data = { itemObject }
+                quantities = { quantities }
+                adjustQuantitiesArray = { adjustQuantitiesArray }
                 />)}
             </ul>
         </div>

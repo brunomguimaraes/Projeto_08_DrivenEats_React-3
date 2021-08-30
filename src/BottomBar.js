@@ -1,4 +1,4 @@
-import {Link} from "react-router-dom";
+import { Link } from "react-router-dom";
 import "./CSS/bottomBar.css";
 
 export default function BottomBar({quantities}) {
@@ -6,17 +6,17 @@ export default function BottomBar({quantities}) {
     let buttonClass;
     let buttonText;
     if (isOrderValid) {
-        buttonClass ="activated";
+        buttonClass = "activated";
         buttonText = "Fechar pedido";
     } else {
-        buttonClass ="";
+        buttonClass = "";
         buttonText = "Selecione os 3 itens para fechar o pedido";
     }
 
     return (
         <div className="bottom-bar">
-            <Link className={`link ${buttonClass}`} to="/revisar" onClick={e => {if(!isOrderValid) {e.preventDefault()}}}>
-                <span>{buttonText}</span>
+            <Link className = { `link ${ buttonClass }` } to = "/revisar" onClick = { e => { if(!isOrderValid) { e.preventDefault() } } }>
+                <span>{ buttonText }</span>
             </Link>
         </div>
     );

@@ -1,5 +1,5 @@
 const deserts = [
-    {name: "Chocolate" , 
+    {name: "Chocolate", 
     description: "Não adianta vir com guaraná pra mim!",
     image: "/Images/Chocolate.jpg",
     alt: "Pedaços de barra de chocolate sobrepostos, com raspas de chocolate em volta como enfeite",
