@@ -1,4 +1,5 @@
 import {Link} from "react-router-dom";
+import "./CSS/confirmationScreen.css";
 
 export default function ConfirmationScreen({serverData, quantities}) {
 

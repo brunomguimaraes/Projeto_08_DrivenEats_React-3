@@ -1,4 +1,5 @@
 import Item from "./Item";
+import "./CSS/menu.css";
 
 export default function Menu({menuIndex, title, items, quantities, adjustQuantitiesArray}) {
     return (

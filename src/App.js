@@ -4,8 +4,11 @@ import BottomBar from "./BottomBar.js";
 import ConfirmationScreen from "./ConfirmationScreen.js";
 import serverData from "./ServerData/AllServerData.js";
 import React,{useState} from "react";
-
 import {BrowserRouter as Router, Switch, Route} from "react-router-dom";
+import "./CSS/reset.css";
+import "./CSS/generalStyles.css";
+
+
 
 export default function App() {
 

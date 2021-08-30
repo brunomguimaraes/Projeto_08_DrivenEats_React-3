@@ -1,4 +1,5 @@
 import {Link} from "react-router-dom";
+import "./CSS/bottomBar.css";
 
 export default function BottomBar({quantities}) {
     const isOrderValid = quantities.every((menuQuantities) => menuQuantities.some((itemQuantity) => itemQuantity !== 0));
