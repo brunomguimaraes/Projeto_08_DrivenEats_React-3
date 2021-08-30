@@ -1,7 +1,6 @@
 import Item from "./Item";
 
 export default function Menu({menuIndex, title, items, quantities, adjustQuantitiesArray}) {
-
     return (
         <div className="menu main-dish">
             <p className = "menu-title">

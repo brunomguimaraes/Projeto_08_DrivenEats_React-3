@@ -1,8 +1,9 @@
 import React,{useState} from "react";
 
 export default function Item({ menuIndex, itemIndex, data:{image, alt, name, description, price}, quantities, adjustQuantitiesArray}) {
-    const [isSelected,setIsSelected] = useState("");
     const itemQuantity = quantities[menuIndex][itemIndex];
+    let initialClass = itemQuantity !== 0 ? "activated-item" : "";
+    const [isSelected,setIsSelected] = useState(initialClass);
 
     function decrementQuantity() {
         if (itemQuantity === 1) {

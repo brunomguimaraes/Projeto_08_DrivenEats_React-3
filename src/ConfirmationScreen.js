@@ -25,7 +25,6 @@ export default function ConfirmationScreen({serverData, quantities}) {
             })
         })
         message += `\nTotal: R$ ${totalPrice.toFixed(2)}`;
-        console.log(message);
         const webLink = "https://wa.me/5521988405128?text=" + encodeURIComponent(message);
         window.open(webLink, '_blank');
     }
